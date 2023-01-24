@@ -4,8 +4,8 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Your Name';
-export const siteTitle = 'Next.js Sample Website';
+const name = 'Teresa Liu';
+export const siteTitle = 'Teresa Liu';
 
 export default function Layout({ children, home }) {
   return (
@@ -13,8 +13,8 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="Teresa Liu"
+          content="My personal website and introduction of myself to the internet"
         />
         <meta
           property="og:image"
@@ -28,28 +28,10 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/profile.png"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.headingTitle}>{name}</h1>
           </>
         ) : (
           <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.png"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href="/" className={utilStyles.colorInherit}>
                 {name}
@@ -59,11 +41,25 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+{/*      {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
         </div>
-      )}
+      )}*/}
+      <hr/>
+      <footer className={styles.footer}>
+        <p>Socials:</p>
+        <a href="https://www.linkedin.com/in/teresaliu20/" className={utilStyles.link}>
+          Linkedin
+        </a>
+        <a href="https://twitter.com/teresa_liu_" className={utilStyles.link}>
+          Twitter
+        </a>
+        <a href="https://github.com/teresaliu20" className={utilStyles.link}>
+          Github
+        </a>
+      </footer>
+      <hr/>
     </div>
   );
 }
