@@ -61,11 +61,16 @@
 
 .linkHighlight {
   color: #111;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: #EBFF6D;
 }
 
 .linkHighlight:hover {
   color: #111;
   background-color: #D4F600;
+  text-decoration: none;
+}
+
+.linkAccentColor {
+  color: #95A91B;
 }
