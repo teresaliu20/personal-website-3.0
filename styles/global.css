@@ -12,6 +12,13 @@ body {
   color: #111;
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }

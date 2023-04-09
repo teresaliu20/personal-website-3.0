@@ -1,6 +1,7 @@
 .container {
   margin: 0rem;
   padding: 1em;
+  overscroll-behavior: none;
 }
 
 .contents {
