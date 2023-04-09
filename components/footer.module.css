@@ -1,0 +1,14 @@
+.footerSocial {
+	margin-right: 20px;
+}
+
+.footerCopyright {
+	margin: 80px 0 40px 0;
+	font-size: 12px;
+	opacity: 0.5;
+}
+
+.footerWrapper {
+  color: white;
+  background-color: #222;
+}

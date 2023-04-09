@@ -1,3 +1,8 @@
+
+.postContainer {
+  
+}
+
 .headingTitle {
   font-size: 4rem;
   line-height: 1.2;
@@ -31,6 +36,22 @@
 .headingMd {
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+.codeText {
+  font-family: Source Code Pro;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.twoColumns {
+  column-count: 2;
+  column-gap: 20px;
+}
+
+.twoColumns p {
+  margin-top: 0px;
 }
 
 .borderCircle {

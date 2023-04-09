@@ -3,13 +3,15 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Header from './header';
+import Footer from './footer';
 
 const name = 'Teresa Liu';
 export const siteTitle = 'Teresa Liu';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.layout}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -25,41 +27,11 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <h1 className={utilStyles.headingTitle}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-{/*      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )}*/}
-      <hr/>
-      <footer className={styles.footer}>
-        <p>Socials:</p>
-        <a href="https://www.linkedin.com/in/teresaliu20/" className={utilStyles.link}>
-          Linkedin
-        </a>
-        <a href="https://twitter.com/teresa_liu_" className={utilStyles.link}>
-          Twitter
-        </a>
-        <a href="https://github.com/teresaliu20" className={utilStyles.link}>
-          Github
-        </a>
-      </footer>
-      <hr/>
+      <Header />
+      <div>
+        <main>{children}</main>
+      </div>
+      <Footer />
     </div>
   );
 }

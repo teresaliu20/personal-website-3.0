@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:bold');
+@import url('https://fonts.googleapis.com/css?family=Inter:400,600,800');
+
 html,
 body {
   padding: 0;
@@ -5,7 +8,7 @@ body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 14px;
   color: #111;
 }
 
@@ -14,11 +17,11 @@ body {
 }
 
 a {
-  color: #111;
+  color: inherit;
 }
 
 a:hover {
-  color: #777;
+  opacity: 0.8;
 }
 
 img {
